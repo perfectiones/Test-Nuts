@@ -1,0 +1,138 @@
+.mission {
+  .mission__body {
+    padding: 0 116px;
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition:
+        opacity 0.7s,
+        transform 0.7s;
+      &.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .title {
+        font-size: 72px;
+        font-weight: 900;
+        line-height: 88px;
+
+        margin-bottom: 40px;
+        span {
+          color: rgba(1, 255, 194, 1);
+        }
+      }
+
+      .subtitle {
+        //gap: 24px;
+        justify-content: space-between;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 38px;
+        p {
+          max-width: 549px;
+        }
+        span {
+          font-weight: 700;
+        }
+
+        &.tw {
+          font-size: 18px;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 33px;
+        }
+      }
+      .titleT {
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 38px;
+
+        span {
+          font-weight: 700;
+          color: rgba(1, 255, 194, 1);
+        }
+      }
+    }
+    .steps {
+      opacity: 0;
+      transform: translateY(20px);
+      transition:
+        opacity 0.7s,
+        transform 0.7s;
+      &.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      margin-top: 99px;
+      position: relative;
+      ul {
+        display: grid;
+        grid-template-columns:
+          minmax(min-content, max-content) minmax(min-content, max-content)
+          minmax(min-content, max-content);
+        grid-template-rows:
+          minmax(min-content, max-content) minmax(min-content, max-content)
+          minmax(min-content, max-content);
+        column-gap: 101px;
+        row-gap: 61px;
+        li:nth-child(4) {
+          grid-column: 3;
+          grid-row: 2;
+        }
+        li:nth-child(5) {
+          grid-column: 3;
+          grid-row: 3;
+        }
+
+        .item {
+          &__num {
+            font-size: 100px;
+            font-weight: 900;
+            line-height: 80px;
+            color: rgba(113, 86, 253, 0.2);
+          }
+          &__text {
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 38px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            span {
+              color: rgba(1, 255, 194, 1);
+            }
+
+            .subtitle {
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 33px;
+              color: rgba(252, 252, 253, 1);
+
+              span {
+                color: rgba(252, 252, 253, 1);
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+      .imgItem {
+        position: absolute;
+        top: 206px;
+        display: flex;
+        max-width: 723px;
+        max-height: 890px;
+        height: 100%;
+        width: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
